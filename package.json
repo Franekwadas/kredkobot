@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "discord.js": "^13.7.0"
+  },
+  "name": "kredkobot",
+  "version": "1.0.0",
+  "description": "Bot for kredka",
+  "main": "main.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zitryt",
+  "license": "ISC"
+}
