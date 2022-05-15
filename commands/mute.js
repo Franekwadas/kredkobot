@@ -65,7 +65,7 @@ module.exports = {
             .setColor('#33ff00')
             .setTitle("Wykonano!")
             .setDescription(`**Wyciszyłem gracza o nicku: **<@${user.id}>\n\n**Za: **__${reason}__`);
-            message.channel.send({ embeds: [embed] })
+            message.channel.send(embed)
         } else {
             client.muteFile.push({
 
@@ -78,7 +78,7 @@ module.exports = {
             .setColor('#33ff00')
             .setTitle("Wykonano!")
             .setDescription(`**Wyciszyłem gracza o nicku: **<@${user.id}>\n\n**Za: **__Powód nie został podany!__`);
-            message.channel.send({ embeds: [embed] })
+            message.channel.send(embed)
         }
 
         client.updateConfig();

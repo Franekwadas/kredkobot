@@ -50,7 +50,7 @@ Client.on('message', (msg) => {
         }   
     }
 
-    if (Client.muteFile.find(p => p.playerID == msg.author.id)) {
+    if (Client.muteFile.find(p => p.playerID == msg.author.id) ) {
         msg.delete(msg);
         return;
     }
