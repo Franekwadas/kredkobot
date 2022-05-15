@@ -30,7 +30,7 @@ Client.prefix = "k!";
 
 Client.once('ready', () => {
 
-    console.log("Starting main module");
+    console.log("Starting main 123");
 
 });
 
