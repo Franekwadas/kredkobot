@@ -20,7 +20,7 @@ module.exports = {
                 message.channel.send("**Przykro mi takiego gracza nie ma na serwerze.**");
                 return;
             }
-            if (!message.member.permissions.cache.has('MANAGE_GUILD')) {
+            if (!message.member.permissions.has('MANAGE_GUILD')) {
                 message.channel.send("**Nie masz wystarczających permisji do użycia tej komendy!**");
                 return;
             }
