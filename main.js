@@ -33,7 +33,7 @@ Client.once('ready', () => {
 
 });
 
-Client.on('messageCreate', (msg) => {
+Client.on('message', (msg) => {
 
     if (msg.author.bot) return;
 
