@@ -14,6 +14,7 @@ const Client = new Discord.Client({
 
 const fs = require('fs');
 Client.muteFile = JSON.parse(fs.readFileSync('./mute.json', 'utf8'));
+Client.banFile = JSON.parse(fs.readFileSync('./ban.json', 'utf8'));
 
 Client.commands = new Discord.Collection();
 
@@ -30,6 +31,14 @@ Client.prefix = "k!";
 Client.once('ready', () => {
 
     console.log("Starting main module");
+
+});
+
+Client.on('guildMemberUpdate', (user) => {
+
+    if (typeof Client.banFile.find(p => p.playerID == user.id) !== 'undefined') {
+        user.kick();
+    }
 
 });
 
