@@ -54,7 +54,7 @@ Client.on('message', (msg) => {
             Client.commands.get(command).execute(msg, args, Client);
             return;
         } else {
-            msg.channel.send("Przykro mi ale nie ma takiej komendy!")
+            msg.channel.send("**Przykro mi ale nie ma takiej komendy!**")
             return;
         }   
     }
