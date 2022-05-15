@@ -13,20 +13,20 @@ module.exports = {
             var player = message.guild.members.cache.get(id);
 
             if (id == message.author.id) {
-                message.channel.send("Nie możesz wyciszyć samego siebie!");
+                message.channel.send("**Nie możesz wyciszyć samego siebie!**");
                 return;
             }
             if (typeof player === 'undefined') {
-                message.channel.send("Przykro mi takiego gracza nie ma na serwerze.");
+                message.channel.send("**Przykro mi takiego gracza nie ma na serwerze.**");
                 return;
             }
             if (!player.permissions.has('MANAGE_GUILD')) {
-                message.channel.send("Nie masz wystarczających permisji do użycia tej komendy!");
+                message.channel.send("**Nie masz wystarczających permisji do użycia tej komendy!**");
                 return;
             }
 
             if (client.muteFile.find(p => p.playerID == id)) {
-                message.channel.send("Ten gracz jest już zmutowany!");
+                message.channel.send("**Ten gracz jest już zmutowany!**");
                 return;
             }
 
@@ -45,7 +45,7 @@ module.exports = {
             this.addMute(player, reason, message.author.name, client, message)
             
         } else {
-            message.channel.send("Poprawne użycie komendy: " + client.prefix + "mute <id/spingowanie gracza> <powód (opcjonalne)>")
+            message.channel.send("**Poprawne użycie komendy: " + client.prefix + "mute <id/spingowanie gracza> <powód (opcjonalne)>**")
         }
         
 
