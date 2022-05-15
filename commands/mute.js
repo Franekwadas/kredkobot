@@ -44,6 +44,8 @@ module.exports = {
             }
             this.addMute(player, reason, message.author.name, client, message)
             
+        } else {
+            message.channel.send("Poprawne użycie komendy: " + client.prefix + "mute <id/spingowanie gracza> <powód (opcjonalne)>")
         }
         
 
