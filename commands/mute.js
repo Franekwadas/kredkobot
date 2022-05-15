@@ -20,7 +20,7 @@ module.exports = {
                 message.channel.send("**Przykro mi takiego gracza nie ma na serwerze.**");
                 return;
             }
-            if (!message.member.permissions.cache.has('MANAGE_GUILD')) {
+            if (!message.member.permissions.has('MANAGE_GUILD')) {
                 message.channel.send("**Nie masz wystarczających permisji do użycia tej komendy!**");
                 return;
             }
@@ -65,7 +65,7 @@ module.exports = {
             .setColor('#33ff00')
             .setTitle("Wykonano!")
             .setDescription(`**Wyciszyłem gracza o nicku: **<@${user.id}>\n\n**Za: **__${reason}__`);
-            message.channel.send({ embeds: [embed] })
+            message.channel.send(embed)
         } else {
             client.muteFile.push({
 
@@ -78,7 +78,7 @@ module.exports = {
             .setColor('#33ff00')
             .setTitle("Wykonano!")
             .setDescription(`**Wyciszyłem gracza o nicku: **<@${user.id}>\n\n**Za: **__Powód nie został podany!__`);
-            message.channel.send({ embeds: [embed] })
+            message.channel.send(embed)
         }
 
         client.updateConfig();
